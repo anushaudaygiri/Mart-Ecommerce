@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser ,faCartShopping} from '@fortawesome/free-solid-svg-icons'
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,9 +18,9 @@ function CollapsibleExample() {
           <Nav className="me-auto">
           </Nav>
           <Nav >
-           <Nav.Link href="#" className="mx-2">Home</Nav.Link>
+           <Nav.Link as={Link} to='/' className="mx-2">Home</Nav.Link>
            <Nav.Link href="#" className="mx-2">shop</Nav.Link>
-           <Nav.Link href="#" className="mx-2">cart</Nav.Link>
+           <Nav.Link as={Link}  to='/Cart'className="mx-2">cart</Nav.Link>
            <Nav.Link className="mx-2" ><FontAwesomeIcon icon={faUser} /></Nav.Link>
            <Nav.Link href="#" className="mx-2"><FontAwesomeIcon icon={faCartShopping} /></Nav.Link>
           </Nav>
