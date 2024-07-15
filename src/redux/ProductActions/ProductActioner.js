@@ -6,3 +6,9 @@ import { ACTION_TYPE } from "../type/ActionType";
   export const removeFromCart = (id) => {
     return { type: ACTION_TYPE.REMOVE_FROM_CART, payload: id };
   };
+  export const increaseQuantity=(product)=>{
+    return {type:ACTION_TYPE.INCREMENT_QUANTITY,payload:product}
+  }
+  export const decreaseQuantity=(product)=>{
+    return {type:ACTION_TYPE.DECREMENT_QUANTITY,payload:product}
+    }

@@ -7,6 +7,10 @@ import { addToCart } from '../redux/ProductActions/ProductActioner'
 import {Link} from "react-router-dom"
 
 function BigDiscounts() {
+
+
+
+
   const dispatch=useDispatch()
 
   return (
@@ -16,10 +20,10 @@ function BigDiscounts() {
         {discoutProducts.map((product) => {
             return (
                 <div className='col-md-4' key={product.id}>
-                  <Link to={`/SingleProduct/${product.id}`}>
+                 
                     <div className='card m-3 shadow '  >
                         <span className='rounded-pill bg-info m-2' style={{width:'4rem'}}>{product.discount}%off</span>
-                        <img src={product. imgUrl} className="card-img-top img-fluid " alt="..." style={{height:'300px'}}/>
+                        <Link to={`/SingleProduct/${product.id}`}>  <img src={product.imgUrl} className="card-img-top img-fluid " alt="..." style={{height:'300px'}}/> </Link>
                         
                         <div className='card-body d-flex justify-content-between align-items-center'>
                             <div>
@@ -35,7 +39,7 @@ function BigDiscounts() {
                             
                             </div>
                             </div>
-                            </Link>
+                           
                     </div>
                     )})
                 }

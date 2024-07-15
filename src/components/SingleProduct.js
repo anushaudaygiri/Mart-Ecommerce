@@ -10,9 +10,8 @@ import { addToCart } from '../redux/ProductActions/ProductActioner'
 function SingleProduct() {
     const {id}=useParams()
     const product=products.find((item)=>item.id===id)
-    console.log(product)
+   
     const filteredProducts=products.filter((item)=>item.category===product.category)
-    console.log(filteredProducts)
     const dispatch=useDispatch()
     
   return (
