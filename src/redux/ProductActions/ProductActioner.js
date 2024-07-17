@@ -12,3 +12,6 @@ import { ACTION_TYPE } from "../type/ActionType";
   export const decreaseQuantity=(product)=>{
     return {type:ACTION_TYPE.DECREMENT_QUANTITY,payload:product}
     }
+  export const selectContent=(content)=>{
+    return {type:ACTION_TYPE.SELECT_CONTENT,payload:content}
+  }

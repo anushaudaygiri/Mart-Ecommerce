@@ -23,7 +23,7 @@ function CollapsibleExample() {
           </Nav>
           <Nav >
            <Nav.Link as={Link} to='/' className="mx-2">Home</Nav.Link>
-           <Nav.Link href="#" className="mx-2">shop</Nav.Link>
+           <Nav.Link as={Link} to ='/Shop' className="mx-2">shop</Nav.Link>
            <Nav.Link as={Link}  to='/Cart'className="mx-2">cart</Nav.Link>
            <Nav.Link className="mx-2" ><FontAwesomeIcon icon={faUser} /></Nav.Link>
            <Nav.Link as={Link}  to='/Cart' className="mx-2"><FontAwesomeIcon icon={faCartShopping} />{cartLength}

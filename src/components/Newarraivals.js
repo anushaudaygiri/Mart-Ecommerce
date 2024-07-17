@@ -1,19 +1,21 @@
 import React from 'react'
-import { discoutProducts } from './products/Products'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar,faPlus} from '@fortawesome/free-solid-svg-icons'
+import { products } from './products/Products'
 
 function Newarraivals() {
+  const newArrivals=products.filter((item)=>item.category==='mobile' || item.category==='wireless')
   return (
     <div className='container '>
         <h1 className='text-center mb-3'>New Arraivals</h1>
        <div className='row justify-content-center'>
-        {discoutProducts.map((product) => {
+        {newArrivals.map((product) => {
             return (
                 <div className='col-md-4' key={product.id}>
                     <div className='card m-3 shadow '  >
-                        <span className='rounded-pill bg-info m-2' style={{width:'4rem'}}>{product.discount}%off</span>
+                        
                         <img src={product.imgUrl} className="card-img-top img-fluid " alt="..." style={{height:'300px'}}/>
                         
                         <div className='card-body d-flex justify-content-between align-items-center'>

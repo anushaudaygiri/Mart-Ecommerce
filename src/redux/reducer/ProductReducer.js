@@ -1,6 +1,8 @@
 
+
 const initialState = {
   products: [],
+  selectedContent:"sofa",
   cartData: JSON.parse(localStorage.getItem('cartData')) || [],
 };
 
@@ -59,6 +61,11 @@ export const productReducer = (state = initialState, action) => {
         ...state,
         cartData: [...state.cartData],
       };
+      case 'SELECT_CONTENT':
+        return {
+          ...state,
+          selectedContent: action.payload,
+          };
 
     default:
       return state;
