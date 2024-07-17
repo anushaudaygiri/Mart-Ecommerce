@@ -3,7 +3,9 @@
 const initialState = {
   products: [],
   selectedContent:"sofa",
+  searchProduct:'',
   cartData: JSON.parse(localStorage.getItem('cartData')) || [],
+
 };
 
 export const productReducer = (state = initialState, action) => {
@@ -65,6 +67,11 @@ export const productReducer = (state = initialState, action) => {
         return {
           ...state,
           selectedContent: action.payload,
+          };
+      case 'SEARCH_PRODUCT':
+        return {
+          ...state,
+          searchProduct: action.payload,
           };
 
     default:

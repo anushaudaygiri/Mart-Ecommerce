@@ -1,13 +1,20 @@
 import React from 'react'
-
+import {ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar,faPlus} from '@fortawesome/free-solid-svg-icons'
 import { products } from './products/Products'
+import { addToCart } from '../redux/ProductActions/ProductActioner';
+import { useDispatch} from 'react-redux';
 
 function Newarraivals() {
   const newArrivals=products.filter((item)=>item.category==='mobile' || item.category==='wireless')
+  const dispatch=useDispatch()
+
   return (
+    <>
+    <ToastContainer autoClose={2000}/>
     <div className='container '>
         <h1 className='text-center mb-3'>New Arraivals</h1>
        <div className='row justify-content-center'>
@@ -28,7 +35,11 @@ function Newarraivals() {
                            <span style={{ color: '#FFD700'}}><FontAwesomeIcon icon={faStar} /></span>
                             <p className='card-text fs-3' >${product.price}</p>
                             </div>
-                            <button className='rounded-circle fs-3 text-primary bg-light' style={{height:'50px', width:'50px'}}><FontAwesomeIcon icon={faPlus} /></button>
+                            <button className='rounded-circle fs-3 text-primary bg-light' style={{height:'50px', width:'50px'}}  onClick={() => {
+                        dispatch(addToCart(product));
+                        toast.success("Product has been added to cart"
+                        );
+                      }}><FontAwesomeIcon icon={faPlus} /></button>
                             
                             </div>
                             </div>
@@ -38,6 +49,7 @@ function Newarraivals() {
        </div>
       
     </div>
+    </>
   )
 }
 

@@ -6,6 +6,7 @@ import{Tabs,Tab} from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar,faPlus} from '@fortawesome/free-solid-svg-icons'
 import { addToCart } from '../redux/ProductActions/ProductActioner'
+import table from "../Images/table.jpg"
 
 function SingleProduct() {
     const {id}=useParams()
@@ -17,7 +18,8 @@ function SingleProduct() {
   return (
     <div>
         <div>
-     <h1>{product.productName}</h1>
+        <h1   className="text-center d-flex align-items-center justify-content-center " style={{ backgroundImage: `url(${table})`, height:"100px"}}>{product.productName}</h1>
+
      <div className='row m-3' >
         <div className='col-md-6 d-flex justify-content-center align-items-center' >
             <img src={product.imgUrl} alt="product name" className='img-fluid  align-center m-0' />
@@ -68,7 +70,7 @@ function SingleProduct() {
     </Tabs>
 
     <div>
-        <h1 className='m-3'>Related Products</h1>
+        <h1 className='m-3'>You Might also like</h1>
         <div className='container '>
        <div className='row justify-content-center'>
         {filteredProducts.map((product) => {

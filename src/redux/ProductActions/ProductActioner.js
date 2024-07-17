@@ -15,3 +15,6 @@ import { ACTION_TYPE } from "../type/ActionType";
   export const selectContent=(content)=>{
     return {type:ACTION_TYPE.SELECT_CONTENT,payload:content}
   }
+  export const searchproduct=(searchTerm)=>{
+    return {type:ACTION_TYPE.SEARCH_PRODUCT,payload:searchTerm}
+  }
