@@ -10,9 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 function BigDiscounts() {
 
-
-
-
   const dispatch=useDispatch()
 
   return (

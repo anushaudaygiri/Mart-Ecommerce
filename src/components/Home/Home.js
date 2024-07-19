@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar,faCreditCard,faShieldHalved,faHeadset} from '@fortawesome/free-solid-svg-icons'
 import BigDiscounts from '../BigDiscounts'
 import Newarraivals from '../Newarraivals'
+import BestSales from '../BestSales'
 import Footer from '../footer/Footer'
 
 
@@ -59,6 +60,9 @@ function Home() {
 </div>
 <div>
     <Newarraivals/>
+</div>
+<div>
+    <BestSales />
 </div>
 <div>
     <Footer/>

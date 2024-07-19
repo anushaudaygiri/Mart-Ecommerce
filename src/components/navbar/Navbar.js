@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 
-
-
 function CollapsibleExample() {
   const cart_data = useSelector((state) => state.ProductData.cartData);
   const cartLength=cart_data.length
@@ -36,3 +34,4 @@ function CollapsibleExample() {
 }
 
 export default CollapsibleExample;
+

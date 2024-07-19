@@ -96,15 +96,15 @@ const Cart = () => {
                                     <p className="text-end" onClick={() => { dispatch(removeFromCart(item.id)) }}>
                                         <FontAwesomeIcon icon={faTimes} />
                                     </p>
-                                    <button className="mx-1" onClick={() => { dispatch(increaseQuantity(item)) }}>+</button>
-                                    <button onClick={() => { dispatch(decreaseQuantity(item)) }}>-</button>
+                                    <button className=" mx-1" onClick={() => { dispatch(increaseQuantity(item)) }}>+</button>
+                                    <button  onClick={() => { dispatch(decreaseQuantity(item)) }}>-</button>
                                 </div>
                             </div>
                         ))
                     }
                 </div>
 
-                <div className="bordercd col-md-3">
+                <div className="border col-md-3">
                     <h3>Cart Summary</h3>
                     <hr />
                     <p>Total Price:</p>
