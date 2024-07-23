@@ -14,8 +14,8 @@ function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg" className=" shadow bg-white"  bg='light' data-bs-theme="light">
       <Container>
-        <Navbar.Brand >React-Bootstrap</Navbar.Brand>
-        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+        <Navbar.Brand >Mart</Navbar.Brand>
+       
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           </Nav>

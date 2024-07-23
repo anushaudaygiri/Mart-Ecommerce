@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar,faPlus} from '@fortawesome/free-solid-svg-icons'
 import { addToCart } from '../redux/ProductActions/ProductActioner'
 import table from "../Images/table.jpg"
+import {ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SingleProduct() {
     const {id}=useParams()
@@ -16,6 +18,8 @@ function SingleProduct() {
     const dispatch=useDispatch()
     
   return (
+    <>
+     <ToastContainer autoClose={4000}/>
     <div>
         <div>
         <h1   className="text-center d-flex align-items-center justify-content-center " style={{ backgroundImage: `url(${table})`, height:"100px"}}>{product.productName}</h1>
@@ -41,7 +45,8 @@ function SingleProduct() {
                 <br/>
             
             </form>
-            <button className='btn btn-primary fw-bold fs-3' onClick={() => dispatch(addToCart(product))} >Add to cart</button>
+            <button className='btn btn-primary fw-bold fs-3' onClick={() =>{ dispatch(addToCart(product)); 
+                            toast.success("Product has been added to cart")}} >Add to cart</button>
             
 
 
@@ -91,8 +96,9 @@ function SingleProduct() {
                            <span style={{ color: '#FFD700'}}><FontAwesomeIcon icon={faStar} /></span>
                             <p className='card-text fs-3' >${product.price}</p>
                             </div>
-                            <button className='rounded-circle fs-3 text-primary bg-light' style={{height:'50px', width:'50px'}} onClick={() => dispatch(addToCart(product))}><FontAwesomeIcon icon={faPlus} /></button>
                             
+                            <button className='rounded-circle fs-3 text-primary bg-light' style={{height:'50px', width:'50px'}} onClick={() =>{ dispatch(addToCart(product)); 
+                            toast.success("Product has been added to cart")}}><FontAwesomeIcon icon={faPlus} /></button>
                             </div>
                             </div>
                            
@@ -107,6 +113,7 @@ function SingleProduct() {
     </div>
 
     </div>
+    </>
   )
 }
 

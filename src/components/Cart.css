@@ -1,0 +1,94 @@
+.cart-summary{
+    border: 1px solid black;
+    padding:15px;
+    height: 200px;
+    margin-left: 400px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+   
+
+}
+.cart-summary p{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.cart-summary .total-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+
+.expression {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.result {
+    font-size: 20px;
+  
+}
+.productName {
+    white-space: nowrap; 
+    margin: 0;           
+    font-size: 20px; 
+    font-weight: bold; 
+    padding: 20px;   
+   
+}
+
+.prize{
+    display: flex;
+    gap:15px;
+    padding: 10px;
+}
+
+
+
+.plus  {
+    margin-left: 400px; 
+    font-size: 20px;
+    
+}
+.quantity{
+    margin-left: 350px;
+    display: flex;
+
+    margin-top: 35px;
+}
+.cart-details{
+    border: 1px solid black;
+    width :150%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    
+   
+}
+
+.cart-empty-message {
+    border: 1px solid #ccc;
+    width:150%;
+    padding: 10px;
+    height:150px;
+    margin-bottom: 20px; 
+    font-size: 20px;
+    font-weight:bold;
+    border:none;
+    background-color: white;
+    border-radius: 10px;
+    
+
+
+}
+.cart-page {
+    background-color: #f9f9f9; 
+    padding: 20px; 
+}
+
+
+
+
